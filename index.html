@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron Video Player</title>
+    <!-- Include Video.js CSS -->
+    <link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+    <style>
+        /* Add some basic styles */
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        #videoBar {
+            margin-bottom: 20px;
+        }
+        #videoPlayer {
+            display: none; /* Initially hide the video player */
+            width: 640px;
+            height: 360px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Video selection bar -->
+        <div id="videoBar">
+            <button id="selectVideoButton">Select Video</button>
+        </div>
+        <!-- Video.js player -->
+        <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto">
+            <source src="" type="video/mp4">
+        </video>
+    </div>
+    <!-- Include Video.js JavaScript -->
+    <script src="node_modules/video.js/dist/video.js"></script>
+    <!-- Linking the renderer JavaScript file -->
+    <script src="renderer.js"></script>
+</body>
+</html>
